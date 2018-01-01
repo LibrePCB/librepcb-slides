@@ -1,3 +1,3 @@
 #!/bin/bash
 
-latexmk -pdf -e '$pdflatex=q/xelatex --shell-escape %O %S/' slides.tex
+latexmk -pdf -shell-escape librepcb-slides.tex
