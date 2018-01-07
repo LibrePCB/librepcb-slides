@@ -1,0 +1,56 @@
+\section{Version Control Systems}
+
+\begin{frame}{\secname}
+
+  \begin{columns}[onlytextwidth]
+    \begin{column}{\textwidth-3.5cm}
+      \textbf{Problem}
+      \begin{itemize}
+        \item Important and unimportant data mixed
+        \item Unclear which files to version control
+      \end{itemize}
+
+      \pause
+
+      \textbf{Result}
+      \begin{itemize}
+        \item Local changes even if nothing modified
+        \item Very large and opaque diffs/commits
+        \item Important files accidentally ignored
+      \end{itemize}
+
+      \pause
+
+      \textbf{Solution}
+      \begin{itemize}
+        \item Many small files for higher granularity
+        \item Unimportant data strictly separated
+        \item Automatic creation of \texttt{.gitignore}
+      \end{itemize}
+    \end{column}
+
+    \hfill
+
+    \begin{column}{3.5cm}
+      \color{blue}\dirtree{%
+        .1 MyProject.
+        .2 .gitignore.
+        .2 boards.
+          .3 default.lp.
+        .2 core.
+          .3 circuit.lp.
+          .3 erc.lp.
+          .3 settings.lp.
+%        .2 library.
+%          .3 \dots.
+        .2 output.
+          .3 \dots.
+        .2 schematics.
+          .3 power.lp.
+          .3 logic.lp.
+        .2 user.
+          .3 \dots.
+      }
+    \end{column}
+  \end{columns}
+\end{frame}
