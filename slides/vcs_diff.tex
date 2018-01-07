@@ -1,0 +1,55 @@
+\section{Version Control Systems}
+
+\begin{frame}[fragile]{\secname}
+  \begin{minted}[baselinestretch=.8,style=trac]{diff}
+--- a/test.kicad_pcb
++++ b/test.kicad_pcb
+@@ -3,7 +3,7 @@
+   (general
+     (no_connects 0)
+-    (area 41.834999 87.554999 233.755001 153.745001)
++    (area 20.171999 28.969758 233.755001 157.374234)
+     (drawings 4)
+@@ -21,7 +21,7 @@
+     (36 B.SilkS user)
+-    (37 F.SilkS user)
++    (37 F.SilkS user hide)
+     (38 B.Mask user hide)
+@@ -62,7 +62,7 @@
+     (aux_axis_origin 0 0)
+-    (visible_elements FFFC4601)
++    (visible_elements FFFC4609)
+     (pcbplotparams
+       (layerselection 0x00030_80000001)\end{minted}
+  
+  \scriptsize{
+    KiCad 4.0.2+dfsg1-stable:
+    zoom around,
+    hide "F.SilkS",
+    show "Through Via"
+  }
+\end{frame}
+
+\begin{frame}[noframenumbering]{\secname}
+  \textbf{Problem}
+  \begin{itemize}
+    \item Files are \textbf{not really} human readable
+  \end{itemize}
+
+  \pause
+
+  \textbf{Result}
+  \begin{itemize}
+    \item Diffs are very hard to understand
+    \item Limited use of version control systems
+  \end{itemize}
+
+  \pause
+
+  \textbf{Solution}
+  \begin{itemize}
+    \item Don't just consider text-based file formats as human readable!
+    \item Control every tiny detail of the generated files
+    \item Consider opaque parts of files as bugs and fix them
+  \end{itemize}
+\end{frame}
