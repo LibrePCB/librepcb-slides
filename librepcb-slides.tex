@@ -4,11 +4,41 @@
 \usepackage{color}
 \definecolor{mainorange}{HTML}{EC811B}
 \definecolor{lightgrey}{HTML}{888888}
+\definecolor{librepcb}{RGB}{41,214,130}
 
 % Syntax highlighting
 \usepackage{minted}
 \usepackage{alltt}
 \newcommand\hi[1]{{\color{mainorange} \textbf{#1}}}
+
+% Directory trees
+\usepackage{dirtree}
+
+% Tikz
+\usepackage{tikz}
+\usepackage{tikzsymbols}
+\usetikzlibrary{calc}
+\usetikzlibrary{positioning}
+\usetikzlibrary{fit}
+\usetikzlibrary{matrix}
+\usetikzlibrary{shapes, shapes.callouts}
+\usetikzlibrary{shadows}
+\usetikzlibrary{arrows, arrows.meta}
+\usetikzlibrary{backgrounds}
+\pgfdeclarelayer{background}
+\pgfdeclarelayer{foreground}
+\pgfsetlayers{background,main,foreground}
+\tikzstyle{lpbox}=[rectangle, draw=black, rounded corners, fill=librepcb, drop shadow,
+                   text centered, anchor=north, text=white]
+\tikzstyle{lpline}=[]
+\tikzstyle{lparrow}=[lpline, -{Stealth}]
+\tikzstyle{lparrow2}=[lpline, {Stealth}-{Stealth}]
+
+% Various packages
+\usepackage{multirow}
+\usepackage{array}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{fontawesome}
 
 % Theme
 \usetheme[%
