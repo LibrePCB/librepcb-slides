@@ -1,0 +1,94 @@
+\section{Footprint Assignment}
+
+\begin{frame}{\secname}
+  \textbf{Problem}
+  \begin{itemize}
+    \item Schematics contain "exact parts" (footprint known)
+  \end{itemize}
+
+  \pause
+
+  \textbf{Result}
+  \begin{itemize}
+    \item Wasting time for choosing (irrelevant) footprints in schematics
+    \item Changing footprints afterwards requires to adjust schematics
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{\secname}
+  \textbf{Solution}
+  \begin{itemize}
+    \item<1-> Schematics contain "components" (footprint unknown)
+    \item<2-> Boards contain "devices" (assign package to component)
+  \end{itemize}
+  \vspace*{-\baselineskip}\leavevmode % reduce space
+  \begin{center}
+    \footnotesize
+    \def\fixedheight{\vrule height 0mm depth 0.7mm width 0pt} % invisible vertical line
+    \begin{tikzpicture}[node distance = 8mm, text width=18mm, every fit/.style={inner sep=2mm}]
+
+      % symbol
+      \begin{pgfonlayer}{foreground}
+        \node (symbol) [lpbox, rectangle split, rectangle split parts=4] {
+          \fixedheight\textbf{Symbol}
+          \nodepart{two}   \fixedheight Pin \textbf{1}
+          \nodepart{three} \fixedheight Pin \textbf{2}
+          \nodepart{four}  \fixedheight Pin \textbf{3}
+        };
+      \end{pgfonlayer}
+
+      % component
+      \begin{pgfonlayer}{foreground}
+        \node (component) [lpbox, rectangle split, rectangle split parts=4, right=of symbol] {
+          \fixedheight\textbf{Component}
+          \nodepart{two}   \fixedheight Signal \textbf{GND}
+          \nodepart{three} \fixedheight Signal \textbf{VCC}
+          \nodepart{four}  \fixedheight Signal \textbf{OUT}
+        };
+      \end{pgfonlayer}
+      \draw[lparrow, draw=red, ultra thick] (component.two   west) -- (symbol.three east);
+      \draw[lparrow, draw=red, ultra thick] (component.three west) -- (symbol.two   east);
+      \draw[lparrow, draw=red, ultra thick] (component.four  west) -- (symbol.four  east);
+
+      % device
+      \begin{pgfonlayer}{foreground}
+        \onslide<2->{\node (device) [lpbox, rectangle split, rectangle split parts=4, right=of component] {
+          \fixedheight\textbf{Device}
+          \nodepart{two}   \fixedheight \textbf{GND} \faArrowRight\ \textbf{2}
+          \nodepart{three} \fixedheight \textbf{VCC} \faArrowRight\ \textbf{3}
+          \nodepart{four}  \fixedheight \textbf{OUT}  \faArrowRight\ \textbf{1}
+        };}
+      \end{pgfonlayer}
+
+      % package
+      \begin{pgfonlayer}{foreground}
+        \onslide<2->{\node (package) [lpbox, rectangle split, rectangle split parts=4, right=of device] {
+          \fixedheight\textbf{Package}
+          \nodepart{two}   \fixedheight Pad \textbf{1}
+          \nodepart{three} \fixedheight Pad \textbf{2}
+          \nodepart{four}  \fixedheight Pad \textbf{3}
+        };}
+      \end{pgfonlayer}
+      \draw<2->[lparrow2, draw=red, ultra thick] (component.two   east) -- (package.three west);
+      \draw<2->[lparrow2, draw=red, ultra thick] (component.three east) -- (package.four  west);
+      \draw<2->[lparrow2, draw=red, ultra thick] (component.four  east) -- (package.two   west);
+
+      % schematic
+      \node (txtschematic) [text centered, above=1.5cm of $(symbol)!0.5!(component)$] {\textbf{Schematic}};
+      \begin{pgfonlayer}{background}
+        \node[lpbox, fill=yellow!20, text=black, fit=(symbol)(component)(txtschematic)] (schematic) {};
+      \end{pgfonlayer}
+
+      % board
+      \onslide<2->{\node (txtboard) [text centered, above=1.5cm of $(device)!0.5!(package)$] {\textbf{Board}};}
+      \begin{pgfonlayer}{background}
+        \onslide<2->{\node[lpbox, fill=yellow!20, text=black, fit=(device)(package)(txtboard)] (board) {};}
+      \end{pgfonlayer}
+    \end{tikzpicture}
+  \end{center}
+
+  \vspace*{-.5\baselineskip}\leavevmode % reduce space
+  \onslide<3->{\faArrowRight\ Schematics can be drawn without worrying about footprints}\\
+  \onslide<4->{\faArrowRight\ Footprints can easily be changed in boards}\\
+  \onslide<5->{\faArrowRight\ Pinout (pin-to-pad map) stored in library}
+\end{frame}
