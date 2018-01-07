@@ -1,0 +1,32 @@
+\section{Self-Contained Projects}
+
+\begin{frame}{\secname}
+  \textbf{Problem}
+  \begin{itemize}
+    \item Projects depend on information stored outside the project
+    \begin{itemize}
+      \item Library entities, settings, fonts, ...
+    \end{itemize}
+  \end{itemize}
+  
+  \pause
+  
+  \textbf{Result}
+  \begin{itemize}
+    \item Projects are not portable (e.g. \textit{"Library not found"} errors)
+    \item Generated production data is not reproducible
+    \item Source code is harder to maintain (more changes are breaking)
+  \end{itemize}
+  
+  \pause
+  
+  \textbf{Solution}
+  \begin{itemize}
+    \item Embed as much information as possible into projects
+    \begin{itemize}
+      \item Library entities (forced, not optional)
+      \item All relevant settings
+      \item Fonts \textit{(work in progress...)}
+    \end{itemize}
+  \end{itemize}
+\end{frame}
