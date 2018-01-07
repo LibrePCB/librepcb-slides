@@ -1,0 +1,49 @@
+\section{Library References}
+
+\begin{frame}{\secname}
+  \textbf{Problem}
+  \begin{itemize}
+    \item Everything is referenced by name
+    \item References only work within the same library
+  \end{itemize}
+
+  \pause
+
+  \textbf{Result}
+  \begin{itemize}
+    \item Broken references after changing names
+    \item Name conflicts because they are not unique
+    \item Many duplicates accross different libraries
+  \end{itemize}
+
+  \pause
+
+  \textbf{Solution}
+  \begin{itemize}
+    \item Every entity is identified by a random UUID
+    \item References always by UUID, never by name
+    \item Entities can be referenced accross different libraries
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{\secname}
+  \begin{minted}[baselinestretch=.9,escapeinside=||]{scm}
+(librepcb_symbol
+ (uuid |\colorbox{yellow}{f0061936-5169-49c9-bfa5-4efc8108cd1c}|)
+ (name "Connector 1x4")
+ ...
+ (pin |\colorbox{yellow}{169d6728-7108-4600-aa48-765711db01bc}| (name "1")
+  (pos -20.32 40.64) (rot 0.0) (length 5.08)
+ )
+ (pin |\colorbox{yellow}{1c49822e-fd83-452a-a7a6-f4ae1357a0c7}| (name "2")
+  (pos 20.32 -40.64) (rot 180.0) (length 5.08)
+ )
+ (pin |\colorbox{yellow}{208bd2b9-ed07-4df5-b5ab-a89fb03378d5}| (name "3")
+  (pos 20.32 -38.1) (rot 180.0) (length 5.08)
+ )
+ (pin |\colorbox{yellow}{2684075c-566e-43fb-b025-17cf43badaf4}| (name "4")
+  (pos 20.32 -12.7) (rot 180.0) (length 5.08)
+ )
+)
+  \end{minted}
+\end{frame}
