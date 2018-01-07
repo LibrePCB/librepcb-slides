@@ -1,0 +1,85 @@
+\section{File Format Extensibility}
+
+\begin{frame}{\secname}
+  \textbf{Problem}
+  \begin{itemize}
+    \item File format of other tools were not designed for extensibility
+  \end{itemize}
+  
+  \pause
+  
+  \textbf{Result}
+  \begin{itemize}
+    \item Missing or broken support for 3D models
+    \item Missing or broken support for SPICE models
+    \item Not ready for future extensions
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{\secname}
+  \textbf{Solution}
+  \begin{itemize}
+    \item 1 entity = 1 directory
+  \end{itemize}
+  
+  \pause
+  
+  \begin{center}
+    \color{blue}
+    \vspace*{-\baselineskip}\leavevmode % reduce space
+    \begin{tikzpicture}[node distance=5mm, hint/.style={rectangle callout, fill=librepcb!30, text=black, rounded corners}]
+      % uuid
+      \node (dir) [] {
+        \large\faFolderOpenO
+      };
+      \node (uuid) [anchor=west] at (dir.east) {
+        \large\texttt{2d9ba47b-3ff1-44db-aa4e-0bfec1f12ea8}
+      };
+      \node [hint, above right=of uuid, anchor=south east, callout absolute pointer=(uuid.north)] {
+        Directory name = entity UUID
+      };
+      
+      % version file
+      \node (file1) [anchor=north west] at (dir.south east) {
+        \large\faFileTextO\ \large\texttt{.librepcb-pkg}
+      };
+      \draw (dir.south) |- (file1.west);
+      \node [hint, below right=5mm and 2cm of file1.north east, anchor=north west, callout absolute pointer=(file1.east), text width=4.5cm] {
+        Plain text file\\
+        $\bullet$ Forward compatible\\
+        $\bullet$ Filename = entity type\\
+        $\bullet$ Content = format version 
+      };
+      
+      % entity file
+      \node (file2) [anchor=north west] at (file1.south west) {
+        \large\faFileTextO\ \large\texttt{package.lp}
+      };
+      \draw (dir.south) |- (file2.west);
+      \node [hint, below right=17mm and 8mm of file2, anchor=north west, callout absolute pointer=(file2.east), text width=4.5cm] {
+        S-Expression file containing the actual entity data
+      };
+      
+      % 3dmodel
+      \onslide<3->{
+        \node (file3) [anchor=north west] at (file2.south west) {
+        \large\faFileImageO\ \large\texttt{3dmodel.wrl}};
+        \draw (dir.south) |- (file3.west);
+      }
+      
+      % step model
+      \onslide<4->{
+        \node (file4) [anchor=north west] at (file3.south west) {
+        \large\faFileImageO\ \large\texttt{3dmodel.step}};
+        \draw (dir.south) |- (file4.west);
+      }
+      
+      % spice model
+      \onslide<5->{
+        \node (file5) [anchor=north west] at (file4.south west) {
+        \large\faFileTextO\ \large\texttt{spice.mod}};
+        \draw (dir.south) |- (file5.west);
+      }
+    \end{tikzpicture}
+  \end{center}
+\end{frame}
