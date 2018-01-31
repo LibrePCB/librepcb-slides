@@ -90,5 +90,22 @@
   \vspace*{-.5\baselineskip}\leavevmode % reduce space
   \onslide<3->{\faArrowRight\ Schematics can be drawn without worrying about footprints}\\
   \onslide<4->{\faArrowRight\ Footprints can easily be changed in boards}\\
-  \onslide<5->{\faArrowRight\ Pinout (pin-to-pad map) stored in library}
+  \onslide<5->{\faArrowRight\ Pin-to-pad mapping stored in library}
+\end{frame}
+
+\begin{frame}{\secname}
+  \textbf{Other Solutions}
+  \begin{itemize}
+    \item Pin-to-pad mapping not stored in the library
+      \begin{itemize}
+        \item Needs to be assigned manually for every part placed in the schematic
+              \faArrowRight\ \textbf{flexible, but annoying and error-prone!}
+      \end{itemize}
+    \pause
+    \item Symbol pins directly assigned to package pads (e.g. by name)
+      \begin{itemize}
+        \item Unflexible (how to create a component with unusual pinout?)
+        \item \textbf{Dangerous because it depends on naming conventions!}
+      \end{itemize}
+  \end{itemize}
 \end{frame}
