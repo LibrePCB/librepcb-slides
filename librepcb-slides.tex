@@ -54,6 +54,7 @@
 \setbeamerfont{title}{size=\fontsize{30}{30}}
 \setbeamerfont{block title}{size=\large}
 \newcommand\sep{\textcolor{lightgrey}{\rule{\linewidth}{0.05mm}}}
+\usepackage{appendixnumberbeamer} % no frame numbering for backup slides
 
 % Meta
 \title{LibrePCB}
@@ -90,14 +91,14 @@
 \include{slides/footprint_variants}
 
 % project
-\include{slides/library_categorization}
-\include{slides/footprint_assignment}
-\include{slides/project_self_contained}
+%\include{slides/library_categorization}
+%\include{slides/footprint_assignment}
+%\include{slides/project_self_contained}
 
 % file format
 \include{slides/vcs_ignore}
 \include{slides/vcs_diff}
-\include{slides/file_format_extensibility}
+%\include{slides/file_format_extensibility}
 
 % contributing
 \include{slides/current_project_status}
@@ -117,6 +118,15 @@
 	\end{centering}
 \end{frame}
 }
+
+% ----------------------------------------------------------------- %
+
+% backup slides
+\appendix
+\include{slides/library_categorization}
+\include{slides/footprint_assignment}
+\include{slides/project_self_contained}
+\include{slides/file_format_extensibility}
 
 % ----------------------------------------------------------------- %
 
