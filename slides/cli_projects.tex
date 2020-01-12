@@ -1,0 +1,34 @@
+\section{CLI for Projects}
+
+\begin{frame}[fragile]{\secname}
+  \textbf{Use-Cases}
+  \begin{itemize}
+    \item Use CI to make sure there are no ERC/DRC issues
+    \item Automatically generate output files (Gerber, BOM, PDF, \ldots)
+  \end{itemize}
+
+  \bigskip
+
+  \textbf{Usage}
+  \scriptsize
+  \begin{minted}[baselinestretch=.8,style=perldoc]{console}
+$ librepcb-cli open-project --erc --export-pcb-fabrication-data MyProject.lpp
+Open project 'MyProject.lpp'...
+Run ERC...
+  Approved messages: 7
+  Non-approved messages: 2
+    - [WARNING] Net signal connected to less than two pins: "CAN_RX"
+    - [WARNING] Net signal connected to less than two pins: "JTCK"
+Export PCB fabrication data...
+  Board 'default':
+    => 'output/v1/gerber/MyProject_DRILLS-PTH.drl'
+    => 'output/v1/gerber/MyProject_OUTLINES.gbr'
+    => 'output/v1/gerber/MyProject_COPPER-TOP.gbr'
+    => 'output/v1/gerber/MyProject_COPPER-BOTTOM.gbr'
+    => 'output/v1/gerber/MyProject_SOLDERMASK-TOP.gbr'
+    => 'output/v1/gerber/MyProject_SOLDERMASK-BOTTOM.gbr'
+    => 'output/v1/gerber/MyProject_SILKSCREEN-TOP.gbr'
+    => 'output/v1/gerber/MyProject_SILKSCREEN-BOTTOM.gbr'
+Finished with errors!
+  \end{minted}
+\end{frame}
