@@ -1,0 +1,9 @@
+name: CI
+on: [push]
+jobs:
+  check:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v1
+    - run: ./docker_build.sh
+    - run: ./docker_run.sh
