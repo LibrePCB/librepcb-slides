@@ -1,0 +1,40 @@
+\section{UI Translations}
+
+\begin{frame}{\secname}
+  Translations (1806 strings) made by 23 translators on Transifex:
+
+  \bigskip
+
+  \begin{tikzpicture}[x=0.07cm,y=-0.5cm]
+    \foreach \l/\x[count=\y] in {
+      English (source)/100,
+      Slovak/98,
+      Czech/96,
+      Russian/62,
+      Chinese/42,
+      Polish/27,
+      German/25,
+      Italian/25,
+      Esperanto/8,
+      Turkish/6,
+      French/4,
+      Ukrainian/4
+    }
+    {
+      \node[left] at (0,\y) {\l};
+      \fill[darkgray] (0,\y-.25) rectangle (\x,\y+.25);
+      \node[right] at (\x, \y) {\x\%};
+    }
+    %\draw (0,0) -- (100,0);
+    %\foreach \x in {20, 40, ..., 100}
+    %{
+    %  \draw (\x,.2) -- (\x,0) node[below] {\x};
+    %}
+    \draw (0,0) -- (0,13);
+
+    %\onslide<2>{
+    %  \node at (70,10) {\Huge{Thanks! \Smiley}};
+    %}
+
+  \end{tikzpicture}
+\end{frame}
