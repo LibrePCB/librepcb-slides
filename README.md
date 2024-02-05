@@ -10,3 +10,11 @@
 ## Building
 
 Run `./docker_run.sh`
+
+## Presenting
+
+To present the PDF with notes:
+
+```
+dspdfviewer librepcb-slides.pdf
+```
