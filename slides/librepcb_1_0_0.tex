@@ -34,4 +34,45 @@
     \node<4>[xshift=4.9cm,yshift=-0.8cm] at (current page.center){%
     \includegraphics[trim=0 0 9.9cm 0,clip,height=5.5cm]{images/output_jobs.png}};
   \end{tikzpicture}
+
+  \note<1>{
+    But now let's take a look at the application. In September last year we
+    released version 1.0 which was a very exciting moment.\\
+
+    Beside many new capabilities of the board editor, like thermal relief pads,
+  }
+
+  \note<2>{
+    this release also added a 3D board viewer with STEP model import and
+    export, which is not only fancy but also a great way to review a design
+    before ordering PCBs.
+  }
+
+  \note<3>{
+    But I'm especially proud of two features which make generating production
+    data a pleasure.\\
+
+    First of all, we have introduced a very comprehensive support for assembly
+    variants and manufacturer part number management.\\
+
+    MPNs can now be stored in libraries so you don't need to add
+    them manually to the schematic. In the schematic you can even assign
+    multiple MPNs to a component to export them as second-source parts to
+    the BOM. Or you can specify different parts for different assembly variants,
+    for example a 10k resistor in one variant but a 0 ohm resistor in another
+    variant.
+  }
+
+  \note<4>{
+    And to make generating these BOMs and any other output data a matter of
+    seconds, we introduced output jobs as a new, unified way to export data.\\
+
+    These output jobs can be configured very flexible and are stored in the
+    project, so the exact same output files can be reproduced on a different
+    computer with just a single click.\\
+
+    Or with the provided command-line interface you may even fully automate
+    the production data generation on a continuous integration system.
+  }
+
 \end{frame}

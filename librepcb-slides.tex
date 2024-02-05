@@ -1,4 +1,14 @@
-\documentclass[aspectratio=169,t,notes]{beamer}
+% Document with or without notes
+\def\shownotes{}  % Uncomment to show notes
+\ifdefined\shownotes
+  \documentclass[aspectratio=169,t,notes]{beamer}
+  \usepackage{movie15}
+  \usepackage{pgfpages}
+  \setbeameroption{show notes on second screen}
+  \setbeamertemplate{note page}{\bigskip\insertnote}
+\else
+  \documentclass[aspectratio=169,t]{beamer}
+\fi
 
 % Colors
 \usepackage{color}
@@ -70,6 +80,11 @@
 % ----------------------------------------------------------------- %
 
 \maketitle
+
+\note{
+  Hello everyone, my name is ..., I'm the founder and main developer of
+  LibrePCB. Today, I will give you a short update about the LibrePCB project.
+}
 
 % ----------------------------------------------------------------- %
 
