@@ -59,10 +59,11 @@
 
 % Meta
 \title{LibrePCB}
-\subtitle{FOSDEM'22 Status Update}
-\date{February 5, 2022} % \today
+\subtitle{FOSDEM'24 Status Update}
+\date{February 4, 2024} % \today
 \author{Urban Bruhin}
 \institute{}
+\titlegraphic{\includegraphics[width=\linewidth]{images/titlepage.png}}
 
 \begin{document}
 
@@ -83,7 +84,12 @@
 % intro
 \include{slides/about}
 %\include{slides/motivation}
-\include{slides/timeline}
+%\include{slides/timeline}
+
+% news
+\include{slides/behind_the_scenes}
+\include{slides/new_website}
+\include{slides/librepcb_1_0_0}
 
 % library
 %\include{slides/library_management}
@@ -109,18 +115,19 @@
 %\include{slides/cli_projects}
 
 % misc
-\include{slides/fab}
-\include{slides/installation_methods}
-\include{slides/translations}
-%\include{slides/available_libraries}
+%\include{slides/fab}
+%\include{slides/installation_methods}
 
-% contributing
-%\include{slides/getting_started}
-%\include{slides/live_demo}
+% live demo
+\include{slides/live_demo}
+
+% end
 \include{slides/current_project_status}
-\include{slides/madewithlibrepcb}
+%\include{slides/translations}
+%\include{slides/available_libraries}
 \include{slides/next_steps}
 \include{slides/contributing}
+\include{slides/getting_started}
 
 % ----------------------------------------------------------------- %
 
@@ -138,13 +145,15 @@
 % ----------------------------------------------------------------- %
 
 % backup slides
-%\appendix
-%\include{slides/why_not_contributing_to_kicad}
+\appendix
+\include{slides/challenges}
+\include{slides/why_not_contributing_to_kicad}
 %\include{slides/library_quality}
 %\include{slides/library_categorization}
 %\include{slides/footprint_assignment}
 %\include{slides/project_self_contained}
 %\include{slides/file_format_extensibility}
+\include{slides/madewithlibrepcb}
 
 % ----------------------------------------------------------------- %
 
