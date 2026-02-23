@@ -35,11 +35,30 @@
 					<img style="margin:120px" src="media/nlnet-ngi0.png"></img>
 					<h3>Urban Bruhin</h3>
 					<h3>February 1, 2026</h3>
+
+					<aside class="notes">
+						Hello everyone! My name is Urban, I'm the founder of
+						LibrePCB, and today I'll give you a quick update about
+						the LibrePCB project and its brand new release 2.0.
+					</aside>
 				</section>
 
 				<section>
 					<h1>About LibrePCB</h1>
 					<img width="100%" src="media/about-librepcb.png"></img>
+
+					<aside class="notes">
+						For those who don't know LibrePCB yet, it is a free
+						and open-source, cross-platform PCB design software
+						which aims to be easy to use, to empower everyone
+						creating professional PCBs very quickly.
+						<br>
+						***
+						<br>
+						It also features a powerful library concept and a
+						human readable file format which is optimized for
+						version control.
+					</aside>
 				</section>
 
 				<section>
@@ -85,7 +104,38 @@
 							</div>
 						</div>
 					</div>
+
+					<aside class="notes">
+						First of all, I'd like to mention our sponsors who
+						share our vision of making hardware development easier.
+						<br/>***<br/>
+						The past three years we got two grants from the NGI Zero
+						program through NLnet, which enabled us to develop both
+						LibrePCB 1.0 and 2.0.
+						<br/>***<br/>
+						Then we have the sponsor AISLER, a great PCB
+						manufacturer with fabs in Germany.
+						<br/>***<br/>
+						PartsBox, an electronic parts inventory system,
+						WinSource, an electronic parts distributor,
+						Bittele, a canadian PCB manufacturer,
+						and the large chinese PCB manufacturers
+						PCBWay, PCBgogo and NextPCB.
+						<br/>***<br/>
+						In addition, we get donations and
+						contributions from the community.
+						<br/>***<br/>
+						Thank you to all those people and companies for
+						supporting the LibrePCB project!
+					</aside>
 				</section>
+
+				<!--<section>
+					<h1>Behind the Scenes</h1>
+					<br>
+					<h2 class="fragment">Working (almost) full-time on LibrePCB since end of 2022!</h2>
+					<img class="fragment" width="100%" src="media/income-distribution.svg"></img>
+				</section>-->
 
 				<section>
 					<h1>Funding 2025</h1>
@@ -93,57 +143,150 @@
 					<img width="45%" src="media/funding.svg"></img>
 					<h2 class="fragment">Working (almost) full-time on LibrePCB since end of 2022!</h2>
 					<h2 class="fragment">Goal: Sustainable funding without public money</h2>
+
+					<aside class="notes">
+						With all those sponsorings and donations we raised
+						around 47'000 Euros last year, which is just enough to
+						survive in Switzerland,
+						<br/><br/>
+						***
+						<br/><br/>
+						so three years after I quit my job, I'm still working
+						full-time on LibrePCB, just doing a little bit of
+						freelance work from time to time.
+						<br/><br/>
+						***
+						<br/><br/>
+						Unfortunately, the NLnet grant ends today, so our
+						next challenge is gonna be to implement a sustainable
+						funding, which in my opinion should not rely on public
+						money for long term.
+					</aside>
 				</section>
 
 				<section>
 					<h1>LibrePCB 1.1.0</h1>
 					<h2>April 2024</h2>
+
+					<aside class="notes">
+						Anyway, let's have a look at what's new in LibrePCB
+						since my last talk at FOSDEM 2 years ago, starting
+						with LibrePCB 1.1.
+					</aside>
 				</section>
 
 				<section>
 					<h1>Live Parts Information</h1>
 					<video width="90%" src="media/live-parts-information.mp4" data-autoplay></video>
+
+					<aside class="notes">
+						First, we integrated live parts information into LibrePCB.
+						Before you add a component to the schematic, you will
+						see the stock availability and prices of the parts, so
+						you never use parts anymore which have supply chain issues.
+						<br/><br/>
+						You will also see whether a part is active or NRND,
+						and often you also get its datasheet and a picture.
+						<br/><br/>
+						This is all live information, fetched from the internet
+						in the moment you scroll through the list of parts.
+						<br/><br/>
+						And this feature requires no configuration, no API keys,
+						no online account, it just works out of the box.
+					</aside>
 				</section>
 
 				<section>
 					<h1>EAGLE Project Import</h1>
 					<img width="85%" src="media/eagle-import.png"></img>
+
+					<aside class="notes">
+						Then, we implemented an EAGLE project importer,
+						so if you used EAGLE before, you can now migrate your
+						projects to LibrePCB.
+					</aside>
 				</section>
 
 				<section>
 					<h1>LibrePCB 1.2.0</h1>
 					<h2>December 2024</h2>
+
+					<aside class="notes">
+						In LibrePCB 1.2,
+					</aside>
 				</section>
 
 				<section>
 					<h1>KiCad Library Import</h1>
 					<video width="70%" src="media/kicad-import.mp4" data-autoplay></video>
+
+					<aside class="notes">
+						we also implemented a KiCad library importer, so
+						if you can't find a specific symbol or footprint in
+						the LibrePCB libraries, you could import them from
+						a KiCad library.
+					</aside>
 				</section>
 
 				<section data-background-color="black">
 					<h1>Footprint Datasheet Overlay</h1>
 					<img width="42%" src="media/footprint-overlay.png"></img>
+
+					<aside class="notes">
+						In the footprint editor it is now possible to overlay
+						a drawing from the datasheet, which is very useful to
+						review a footprint, for example to see if any pad is
+						at a wrong position.
+					</aside>
 				</section>
 
 				<section>
 					<h1>Datasheets in Schematics</h1>
 					<img width="100%" src="media/schematic-datasheets.png"></img>
+
+					<aside class="notes">
+						Datasheets can now be opened directly from the schematic
+						editor.
+					</aside>
 				</section>
 
 				<section>
 					<h1>Specctra Export / Import</h1>
 					<h3>For External Autorouter (e.g. Freerouting)</h3>
 					<img width="82%" src="media/freerouting.png"></img>
+
+					<aside class="notes">
+						And since people always ask for an autorouter (I don't
+						know why) we implemented a Specctra export/import,
+						which now at least allows to use an external autorouter.
+					</aside>
 				</section>
 
 				<section>
 					<h1>Mass-Import Pins from Datasheet</h1>
 					<video width="85%" src="media/import-pins.mp4"></video>
+
+					<aside class="notes">
+						Another simple but useful feature is importing pins from
+						a datasheet.
+						<br><br>
+						***
+						<br><br>
+						Instead of typing all the pin names by hand
+						when you create a new symbol, you can just copy the
+						pinout table from a datasheet, paste it into LibrePCB
+						and LibrePCB automatically extracts the pin names and
+						creates the corresponding pins.
+					</aside>
 				</section>
 
 				<section>
 					<h1>LibrePCB 1.3.0</h1>
 					<h2>March 2025</h2>
+
+					<aside class="notes">
+						In LibrePCB 1.3 we made some technology updates.
+					</aside>
 				</section>
 
 				<section>
@@ -151,6 +294,11 @@
 					<img style="position:absolute; left:200px; top:-30px; width:200px; height:auto;"
 					     src="media/qt-logo.png"></img>
 					<img width="50%" src="media/qt6.png"></img>
+
+					<aside class="notes">
+						We migrated from Qt5 to Qt6, which involved quite some
+						effort,
+					</aside>
 				</section>
 
 				<section>
@@ -166,16 +314,54 @@
 						</div>
 						<!--<img class="fragment" width="68%" src="media/ibom-crate.png"></img>-->
 					</div>
+
+					<aside class="notes">
+						...and we started to use the Rust programming language
+						in addition to C++.
+						<br/><br/>
+						The main reasons for this step is to increase the
+						speed of development thanks to the huge Rust ecosystem,
+						<br/><br/>
+						to reduce runtime errors and bugs thanks to Rusts
+						compile-time checks and memory safety guarantees,
+						<br/><br/>
+						and in general to move LibrePCB to a future-proof
+						technology instead of staying with C++ which is
+						more and more considered legacy.
+						<br/><br/>
+						However, this is a long way as we are currently at
+						0.9% Rust code while the rest is still C++.
+					</aside>
 				</section>
 
 				<section>
 					<h1>Interactive HTML BOM Export</h1>
 					<video width="90%" src="media/ibom.mp4"></video>
+
+					<aside class="notes">
+						The first feature which we implemented in Rust, is
+						a generator for interactive HTML BOMs.
+						<br><br>
+						***
+						<br><br>
+						This generator
+						is integrated into LibrePCB as an output job, so with
+						just a click you can now export an interactive BOM.
+						<br/><br/>
+						You might know the interactive BOM already from KiCad,
+						where this is available as a plugin, if I remember
+						correctly. In LibrePCB, this is now a built-in feature.
+					</aside>
 				</section>
 
 				<section>
 					<h1>LibrePCB 2.0.0</h1>
 					<h2>February 2026</h2>
+
+					<aside class="notes">
+						Now, let's get to the interesting part! LibrePCB 2.0
+						has been released just 4 days ago,
+					</aside>
 				</section>
 
 				<section>
@@ -190,51 +376,189 @@
 					<!--<br>
 					<br>
 					<h2 class="fragment">24.184 Lines of Slint Code!</h2>-->
+
+					<aside class="notes">
+						...where we made another technology update.
+						<br/><br/>
+						We have rewritten our whole user interface from scratch
+						with a new UI toolkit named Slint.
+						<br/><br/>
+						Compared to Qt Widgets which we used before, Slint gives
+						us much more freedom in the UI design,
+						<br/><br/>
+						ensures a consistent look & feel across all platforms,
+						<br/><br/>
+						speeds up development thanks to a declarative UI
+						description language,
+						<br/><br/>
+						and aligns with our long-term strategy to move from
+						C++ to Rust, as Slint itself is implemented in Rust too.
+					</aside>
 				</section>
 
 				<section>
 					<h1>Tabbed Window</h1>
 					<video width="87%" src="media/new-window.mp4"></video>
+
+					<aside class="notes">
+						In this new UI, we have also switched to a completely
+						different concept. Instead of having a project management window,
+						schematic editor window, a board editor window,
+						a library editor window and so on, we now have a single
+						window where you can open any kind of document as tabs.
+						<br/><br/>
+						***
+						<br/><br/>
+						So you can open a schematic in one tab, a board in
+						another tab, you can split the window to see tabs
+						next to each other, which is useful on single monitor
+						setups.
+						<br/><br/>
+						On multi monitor setups however, you may just open
+						a second window and move some tabs there, for example
+						the board editor on one monitor and the live 3D viewer
+						on another monitor.
+					</aside>
 				</section>
 
 				<section>
 					<h1>Library Manager</h1>
 					<video width="87%" src="media/library-manager.mp4"></video>
+
+					<aside class="notes">
+						The library manager has been rewritten from scratch too
+						and is now seamlessly integrated into the new window.
+						<br/><br/>
+						In the sidebar you will already see if any of the
+						installed libraries have updates available (***), and in the
+						library manager you will then see which libraries are
+						selected for update.
+						<br/><br/>
+						Here you see all the available libraries and you can
+						just select or deselect the libraries you like to
+						install or to remove. After applying the changes,
+						the libraries are downloaded from the internet and
+						are ready to use.
+					</aside>
 				</section>
 
 				<section>
 					<h1>PCB Ordering</h1>
 					<video width="87%" src="media/order-pcb.mp4"></video>
+
+					<aside class="notes">
+						The PCB ordering feature has been integrated into the
+						new window too, and it now automatically informs you
+						about the state of the ERC and DRC messages.
+						<br/><br/>
+						***
+						<br/><br/>
+						If you try to order the PCB without running the DRC
+						first, LibrePCB directly provides the option to run the
+						DRC and displays the result.
+						<br/><br/>
+						After fixing any issues, the upload button is now green
+						and you can proceed with ordering the PCB, which
+						forwards the project to LibrePCB Fab where you can
+						choose the desired PCB manufacturer.
+					</aside>
 				</section>
 
 				<section>
 					<h1>Enhanced 3D Viewer</h1>
 					<video width="80%" src="media/3d-viewer.mp4" data-autoplay></video>
+
+					<aside class="notes">
+						The 3D viewer also got a small update, which allows you
+						now to hide every physical layer individually to
+						inspect the PCB in more detail.
+					</aside>
 				</section>
 
 				<section>
 					<h1>Schematic Buses</h1>
 					<video width="80%" src="media/schematic-buses.mp4" data-autoplay></video>
+
+					<aside class="notes">
+						Beside the new UI, LibrePCB now also supports buses
+						to keep the schematics clean,
+					</aside>
 				</section>
 
 				<section>
 					<h1>Images in Schematics</h1>
 					<img width="70%" src="media/schematic-images.png"></img>
+
+					<aside class="notes">
+						And adding images to schematics, for example to add
+						formulas, diagrams or company logos.
+					</aside>
 				</section>
 
 				<section>
 					<h1>Shared Design Rules &amp; Output Jobs</h1>
 					<video width="67%" src="media/shared-design-rules.mp4"></video>
+
+					<aside class="notes">
+						Also we made it much easier to set up board design rules
+						for specific PCB manufacturers. Design rules can now be
+						stored in libraries, which allows to share design rules
+						through the library manager.
+						<br/><br/>
+						***
+						<br/><br/>
+						In future we plan to add design rules to our official
+						libraries, so the design rules for AISLER, PCBWay and
+						so on will be available out of the box.
+						<br/><br/>
+						***
+						<br/><br/>
+						The same also works for output job settings, so for
+						example you can now just the load Gerber Export settings
+						for PCBway or for AISLER and you don't need to specify
+						those settings manually anymore.
+					</aside>
 				</section>
 
 				<section>
 					<h1>Choose Your Soldering Technique</h1>
 					<video width="57%" src="media/preferred-footprint.mp4"></video>
+
+					<aside class="notes">
+						One challenge of an EDA software is to be suitable for
+						both, the hobbyist with a big solder iron and shaky
+						hands, and the professional engineer creating high
+						density boards.
+						<br/><br/>
+						The hobbyist wants to have large solder pads to make
+						hand soldering easy for him. But for the same device,
+						the engineer wants to have small footprint pads which
+						are suitable for reflow soldering and save space on
+						the board.
+						<br/>***<br/>
+						In LibrePCB 2.0 you can therefore set your preference
+						about the soldering techique, for example hand soldering
+						for through-hole pads and reflow soldering for SMT pads.
+						In addition, you can choose between IPC density levels
+						A, B and C.
+						<br/><br/>
+						Whenever you add a new device to a board, LibrePCB
+						then automatically choses the footprint which matches
+						your preference.
+					</aside>
 				</section>
 
 				<section>
 					<h1>Auto-Reload</h1>
 					<video width="100%" src="media/auto-reload.mp4" data-autoplay></video>
+
+					<aside class="notes">
+						For those who are generating LibrePCB symbols and
+						footprints for example with a Python script, you can now
+						use LibrePCB as a live preview of the generated files
+						since it watches for file modifications and
+						automatically reloads modified files from disk.
+					</aside>
 				</section>
 
 				<section>
@@ -252,6 +576,18 @@
 							<h3>Code-Signing Sponsored By</h3>
 							<img width="600px" src="media/sponsor-ossign.png"></img>
 						</span>
+
+						<aside class="notes">
+							Last but not least, our official releases for Windows
+							and Apple Silicon are now signed, and also we restored
+							compatibility with MacOS 10.14 for Intel processors.
+							<br/><br/>
+							***
+							<br/><br/>
+							The code signing is sponsored by OSSign, so thanks to
+							their support, the operating systems do no longer
+							claim that LibrePCB is a dangerous software.
+						</aside>
 					</section>
 
 					<section>
@@ -288,6 +624,19 @@
 						<br>
 						<br>
 						<span style="color:white; font-family:Noto Sans Mono;">@ubruhin:matrix.org</span>
+
+						<aside class="notes">
+							Thank you for your attention.
+							<br/><br/>
+							You can reach me out on Matrix, or you can make me
+							happy by supporting the LibrePCB project with a
+							donation. Thank you.
+						</aside>
+					</section>
+
+					<section>
+						<h1>KiCad vs. LibrePCB</h1>
+						<img width="80%" src="media/kicad-vs-librepcb.jpg"></img>
 					</section>
 				</section>
 			</div>
