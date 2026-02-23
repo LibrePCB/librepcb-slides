@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>LibrePCB 2.0</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vsalvino/computer-modern@main/fonts/sans.css">
+
+		<style>
+			.cms {
+				font-family: "Computer Modern Sans", sans-serif;
+			}
+			.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+				text-transform: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1 style="font-size:215px;">LibrePCB 2.0</h1>
+					<hr>
+					<h1>More than just a new look</h1>
+					<img style="margin:120px" src="media/nlnet-ngi0.png"></img>
+					<h3>Urban Bruhin</h3>
+					<h3>February 1, 2026</h3>
+				</section>
+
+				<section>
+					<h1>About LibrePCB</h1>
+					<img width="100%" src="media/about-librepcb.png"></img>
+				</section>
+
+				<section>
+					<h1>Sponsors &amp; Contributors</h1>
+					<table>
+						<tr>
+							<td style="text-align: center; border: none;">
+								<span class="fragment">
+									<h4 style="color:gray;">Platinum</h4>
+									<img width="400px" src="media/nlnet-ngi0.png"></img>
+								</span>
+								<br/>
+								<br/>
+								<br/>
+								<span class="fragment">
+									<h4 style="color:gray; text-align: center;">Silver</h4>
+									<img width="500px" src="media/sponsor-aisler.png"></img>
+								</span>
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fragment" style="text-align: center; border: none;">
+								<h4 style="color:gray;">Bronze</h4>
+								<img width="400px" src="media/sponsor-partsbox.png"></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<img width="400px" src="media/sponsor-winsource.png"></img><br/>
+								<img width="400px" src="media/sponsor-bittele.png"></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<img width="400px" src="media/sponsor-pcbway.png"></img><br/>
+								<img width="400px" src="media/sponsor-nextpcb.png"></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<img width="400px" src="media/sponsor-pcbgogo.png"></img><br/>
+								<br/>
+								<h2 class="fragment">+ Donations<br/>+ Contributors<br/>+ Translators</h2>
+							</td>
+						</tr>
+					</table>
+
+					<div class="fragment" style="position: absolute; top: 85%; left: 47%; transform: translate(-50%, -50%);">
+						<div style="position: relative; display: inline-block;">
+							<i class="fas fa-heart" style="font-size: 350px; color: red;"></i>
+							<div class="cms" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 70px; font-weight: bold; text-align: center;">
+								Thank You!
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h1>Funding 2025</h1>
+					<h2>~47k EUR Total</h2>
+					<img width="45%" src="media/funding.svg"></img>
+					<h2 class="fragment">Working (almost) full-time on LibrePCB since end of 2022!</h2>
+					<h2 class="fragment">Goal: Sustainable funding without public money</h2>
+				</section>
+
+				<section>
+					<h1>LibrePCB 1.1.0</h1>
+					<h2>April 2024</h2>
+				</section>
+
+				<section>
+					<h1>Live Parts Information</h1>
+					<video width="90%" src="media/live-parts-information.mp4" data-autoplay></video>
+				</section>
+
+				<section>
+					<h1>EAGLE Project Import</h1>
+					<img width="85%" src="media/eagle-import.png"></img>
+				</section>
+
+				<section>
+					<h1>LibrePCB 1.2.0</h1>
+					<h2>December 2024</h2>
+				</section>
+
+				<section>
+					<h1>KiCad Library Import</h1>
+					<video width="70%" src="media/kicad-import.mp4" data-autoplay></video>
+				</section>
+
+				<section data-background-color="black">
+					<h1>Footprint Datasheet Overlay</h1>
+					<img width="42%" src="media/footprint-overlay.png"></img>
+				</section>
+
+				<section>
+					<h1>Datasheets in Schematics</h1>
+					<img width="100%" src="media/schematic-datasheets.png"></img>
+				</section>
+
+				<section>
+					<h1>Specctra Export / Import</h1>
+					<h3>For External Autorouter (e.g. Freerouting)</h3>
+					<img width="82%" src="media/freerouting.png"></img>
+				</section>
+
+				<section>
+					<h1>Mass-Import Pins from Datasheet</h1>
+					<video width="85%" src="media/import-pins.mp4"></video>
+				</section>
+
+				<section>
+					<h1>LibrePCB 1.3.0</h1>
+					<h2>March 2025</h2>
+				</section>
+
+				<section>
+					<h1>Migration Qt5 → Qt6</h1>
+					<img style="position:absolute; left:200px; top:-30px; width:200px; height:auto;"
+					     src="media/qt-logo.png"></img>
+					<img width="50%" src="media/qt6.png"></img>
+				</section>
+
+				<section>
+					<h1>C++ → Rust <img style="position:relative;height:140px;bottom:-50px" src="media/rust-logo.png"></img></h1>
+					<div class="r-stack">
+						<div>
+							<ul style="font-size:60px;padding-top:100px;padding-bottom:100px">
+								<li class="fragment">Faster development</li>
+								<li class="fragment">Less error-prone</li>
+								<li class="fragment">Future-proof</li>
+							</ul>
+							<h2 class="fragment">Current state:<br>0.9% Rust</h2>
+						</div>
+						<!--<img class="fragment" width="68%" src="media/ibom-crate.png"></img>-->
+					</div>
+				</section>
+
+				<section>
+					<h1>Interactive HTML BOM Export</h1>
+					<video width="90%" src="media/ibom.mp4"></video>
+				</section>
+
+				<section>
+					<h1>LibrePCB 2.0.0</h1>
+					<h2>February 2026</h2>
+				</section>
+
+				<section>
+					<h1>Qt Widgets&nbsp;&nbsp;→&nbsp;&nbsp;<img style="position:relative;height:100px;bottom:-30px" src="media/slint-logo.png"></img></h1>
+					<br>
+					<ul style="font-size:60px">
+						<li class="fragment">More freedom, more flexibility</li>
+						<li class="fragment">Consistent look & feel across platforms</li>
+						<li class="fragment">Declarative → faster development</li>
+						<li class="fragment">Aligns with our Rust strategy</li>
+					</ul>
+					<!--<br>
+					<br>
+					<h2 class="fragment">24.184 Lines of Slint Code!</h2>-->
+				</section>
+
+				<section>
+					<h1>Tabbed Window</h1>
+					<video width="87%" src="media/new-window.mp4"></video>
+				</section>
+
+				<section>
+					<h1>Library Manager</h1>
+					<video width="87%" src="media/library-manager.mp4"></video>
+				</section>
+
+				<section>
+					<h1>PCB Ordering</h1>
+					<video width="87%" src="media/order-pcb.mp4"></video>
+				</section>
+
+				<section>
+					<h1>Enhanced 3D Viewer</h1>
+					<video width="80%" src="media/3d-viewer.mp4" data-autoplay></video>
+				</section>
+
+				<section>
+					<h1>Schematic Buses</h1>
+					<video width="80%" src="media/schematic-buses.mp4" data-autoplay></video>
+				</section>
+
+				<section>
+					<h1>Images in Schematics</h1>
+					<img width="70%" src="media/schematic-images.png"></img>
+				</section>
+
+				<section>
+					<h1>Shared Design Rules &amp; Output Jobs</h1>
+					<video width="67%" src="media/shared-design-rules.mp4"></video>
+				</section>
+
+				<section>
+					<h1>Choose Your Soldering Technique</h1>
+					<video width="57%" src="media/preferred-footprint.mp4"></video>
+				</section>
+
+				<section>
+					<h1>Auto-Reload</h1>
+					<video width="100%" src="media/auto-reload.mp4" data-autoplay></video>
+				</section>
+
+				<section>
+					<section>
+						<h1>Enhanced Release Binaries</h1>
+						<br>
+						<br>
+						<h2><i class="fa-brands fa-windows"></i> Signed Windows Releases</h2>
+						<h2><i class="fa-brands fa-apple"></i> Signed MacOS Releases (ARM)</h2>
+						<h2><i class="fa-brands fa-apple"></i> MacOS >= 10.14 Compatibility (Intel)</h2>
+						<br>
+						<br>
+						<br>
+						<span class="fragment">
+							<h3>Code-Signing Sponsored By</h3>
+							<img width="600px" src="media/sponsor-ossign.png"></img>
+						</span>
+					</section>
+
+					<section>
+						<h1>Library Updates</h1>
+						<img width="70%" src="media/library-updates.png"></img>
+					</section>
+
+					<section>
+						<h1>What's Next?</h1>
+						<h2>Many ideas, in arbitrary order:</h2>
+						<ul style="font-size:60px">
+							<li>Polish the new UI, professional look, light theme, ...</li>
+							<li>Hierarchical sheets</li>
+							<li>Push&amp;shove router</li>
+							<li>Funding model (e.g. paid support)</li>
+							<li>Any many more...</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section data-background-color="black">
+						<h1 style="font-family:Computer Modern Sans;">Thank you!</h1>
+						<span>
+							<img style="position:relative;height:60px;bottom:-35px" src="media/logo-monochrome.png"></img>&nbsp;
+							<a href="https://librepcb.org/" style="text-decoration:none; color:white; font-family:Noto Sans Mono;">https://librepcb.org</a>
+						</span>
+						<br>
+						<br>
+						<span>
+							<i class="fas fa-heart"></i>&nbsp;
+							<a href="https://librepcb.org/donate/" style="text-decoration:none; color:white; font-family:Noto Sans Mono;">https://librepcb.org/donate/</a>
+						</span>
+						<br>
+						<br>
+						<span style="color:white; font-family:Noto Sans Mono;">@ubruhin:matrix.org</span>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				width: 1920,
+  				height: 1080,
+				progress: true,
+				transition: 'slide',
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+
+				keyboard: {
+					32: () => {
+						const currentVideo = Reveal.getCurrentSlide().querySelector('video');
+						if (currentVideo) {
+							currentVideo.paused ? currentVideo.play() : currentVideo.pause();
+						} else {
+							Reveal.next();
+						}
+					}
+				}
+			});
+		</script>
+	</body>
+</html>
